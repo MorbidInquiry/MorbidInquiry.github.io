@@ -1,0 +1,730 @@
+<!doctype html>
+<html>
+  <head>
+    <title>CYOA</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Stylish">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Permanent+Marker">
+    <script src="../../scripts/jquery-3.4.1.min.js"></script>
+    <script src="index.js"></script>
+  </head>
+  <body>
+  
+  <div id="mainBacking">
+    <div id="titleBox">
+      <img class="titleImage" src="../Images/Titles/title.png">
+      <h2 id="playerHeader"></h2>
+      <div id="screenButtonTray">
+        <div class="screenButton">Intro</div>
+        <div class="screenButton">Conditions</div>
+        <div class="screenButton">Self</div>
+        <div class="screenButton">Master</div>
+        <div class="screenButton">Se</div>
+        <div class="screenButton">Extreme</div>
+        <div class="screenButton">End</div>
+      </div>
+    </div>
+    <div class="screen" id="screenIntro">
+      <div class="textHeader">Status</div>
+      <div class="textBox">
+        <p>
+        Select the official relationship between you and your master.<br><br>
+        Do note that further options later will determine how your master treats you, regardless of the official relationship status.<br><br>
+        </p>
+        <p class="selectNumber">Select One</p>
+      </div>
+      <div class="itemTray" id="itemTrayIntroStatus" data-limit=1>
+        <div class="itemBox" id="itemIntroSpouse">
+          <img class="itemImage" src="../Images/Placeholder.png">
+          <p class="itemName">Spouse</p>
+          <p class="itemDescription">This is the description for a selectable item</p>
+          <p class="points">-20</p>
+          <p class="months">+24</p>
+        </div>
+        <div class="itemBox" id="itemIntroLover">
+          <img class="itemImage" src="../Images/Placeholder.png">
+          <p class="itemName">Lover</p>
+          <p class="itemDescription">This is the description for a selectable item</p>
+          <p class="points">-10</p>
+          <p class="months">+12</p>
+        </div>
+        <div class="itemBox" id="itemIntroSub">
+          <img class="itemImage" src="../Images/Placeholder.png">
+          <p class="itemName">Voluntary Sub</p>
+          <p class="itemDescription">This is the description for a selectable item</p>
+        </div>
+        <div class="itemBox" id="itemIntroSlave">
+          <img class="itemImage" src="../Images/Placeholder.png">
+          <p class="itemName">Slave</p>
+          <p class="itemDescription">This is the description for a selectable item</p>
+          <p class="points">10</p>
+          <p class="months">-6</p>
+        </div>
+      </div>
+      <div class="textHeader">Master's Feelings</div>
+      <div class="textBox">
+        <p>
+        Select the official relationship between you and your master.<br><br>
+        Do note that further options later will determine how your master treats you, regardless of the official relationship status.<br><br>
+        </p>
+        <p class="selectNumber">Select One</p>
+      </div>
+      <div class="itemTray" id="itemTrayIntroMasterFeelings" data-limit=1>
+        <div class="itemBox smallBox" id="itemIntroDespised">
+          <img class="itemImage" src="../Images/Placeholder.png">
+          <p class="itemName">Despised</p>
+          <p class="itemDescription">
+          Your master hates you deeply for some reason or another and it definitely shows.<br><br>
+          Within the bounds of any other options taken, your master will go out of their way to make things difficult and painful for you.
+          </p>
+          <p class="points">15</p>
+          <p class="months">-6</p>
+        </div>
+        <div class="itemBox smallBox" id="itemIntroDisdain">
+          <img class="itemImage" src="../Images/Placeholder.png">
+          <p class="itemName">Disdain</p>
+          <p class="itemDescription">
+          Your master does not seem to care much for you, looking down upon your person.<br><br>
+          While they won't go out of their way to harm you, expect any interactions to be exceptionally rough, and to not receive any consideration.
+          </p>
+          <p class="points">10</p>
+          <p class="months">-3</p>
+        </div>
+        <div class="itemBox smallBox" id="itemIntroSub">
+          <img class="itemImage" src="../Images/Placeholder.png">
+          <p class="itemName">Neutral</p>
+          <p class="itemDescription">
+          Your master has no strong feelings one way or another about you. This might as well be a business arrangment, albeit one for sex.<br><br>
+          Your interactions will be civil, your master giving you consideration as a person, but do not expect any great gestures or favors.
+          </p>
+        </div>
+        <div class="itemBox smallBox" id="itemIntroAmicable">
+          <img class="itemImage" src="../Images/Placeholder.png">
+          <p class="itemName">Amicable</p>
+          <p class="itemDescription">
+          Your master seems to like you. It's a little unclear if you just click with them on a friendly level, or if there might be some genuine affection there.
+          While they do not exactly dote upon you, your master is willing to go out of their way for you every now and then.
+          </p>
+          <p class="points">-10</p>
+          <p class="months">12</p>
+        </div>
+        <div class="itemBox smallBox" id="itemIntroBeloved">
+          <img class="itemImage" src="../Images/Placeholder.png">
+          <p class="itemName">Beloved</p>
+          <p class="itemDescription">
+          Your master is genuinely in love with you.<br><br>
+          Aside from any of the sexual kinks taken as part of the CYOA your master tries their best to be loving towards you, hating to see you in genuine distress.
+          </p>
+          <p class="points">-20</p>
+          <p class="months">24</p>
+        </div>
+      </div>
+      <div class="textHeader">Test</div>
+      <div class="textBox">
+        <p>
+          Testing things
+        </p>
+      </div>
+      <div class="itemTray" id="itemTray1">
+        <div class="itemBox" id="item1">
+          <img class="itemImage" src="../Images/Placeholder.png">
+          <p class="itemName">Item Uno</p>
+          <p class="itemDescription">This is the description for a selectable item</p>
+        </div>
+        <div class="itemBox" id="item2">
+          <img class="itemImage" src="../Images/Placeholder.png">
+          <p class="itemName">Two words</p>
+          <p class="itemDescription">This is the description for a selectable item</p>
+          <p class="itemRequirement">item1</p>
+          <p class="itemRestriction"></p>
+          <p class="months">-5</p>
+          <p class="points">-10</p>
+        </div>
+        <div class="itemBox" id="item3">
+          <img class="itemImage" src="../Images/Placeholder.png">
+          <p class="itemName">wordone wordtwo</p>
+          <p class="itemDescription">This is the description for a selectable item</p>
+          <p class="itemRequirement"></p>
+          <p class="itemRestriction">item2</p>
+          <p class="points">+10</p>
+        </div>
+        <div class="itemBox" id="item4">
+          <img class="itemImage" src="../Images/Placeholder.png">
+          <p class="itemName">Item heading</p>
+          <p class="itemDescription">This is the description for a selectable item</p>
+          <p class="itemRequirement">item1</p>
+          <p class="itemRestriction">item2</p>
+          <p class="points">-5</p>
+        </div>
+        <div class="itemBox" id="item5">
+          <img class="itemImage" src="../Images/Placeholder.png">
+          <p class="itemName">Item heading</p>
+          <p class="itemDescription">This is the description for a selectable item</p>
+          <p class="itemRequirement">item1</p>
+          <p class="itemRestriction">item2, item3</p>
+          <p class="points">-5</p>
+        </div>
+        <div class="itemBox" id="item6">
+          <img class="itemImage" src="../Images/Placeholder.png">
+          <p class="itemName">Item heading</p>
+          <p class="itemDescription">This is the description for a selectable item</p>
+          <p class="itemRequirement">item1, item4, item5</p>
+          <p class="itemRestriction">item2</p>
+          <p class="points">-5</p>
+        </div>
+        <div class="itemBox" id="item7">
+          <img class="itemImage" src="../Images/Placeholder.png">
+          <p class="itemName">Item heading</p>
+          <p class="itemDescription">This is the description for a selectable item</p>
+          <p class="itemRequirement"></p>
+          <p class="itemRestriction">item2, item3, item4</p>
+          <p class="points">-5</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="screen" id="screenSelf">
+      <div class="textHeader">Your Genitals</div>
+      <div class="textBox">
+        <p>
+        Select the genital(s) that you want.<br><br>
+        Preferably you choose at least one or that just wouldn't be any fun at all. You could even take both if you really wanted to.
+        </p>
+      </div>
+      <div class="itemTray" id="itemTraySelfGenitals">
+        <div class="itemBox largeBox" id="itemSelfVagina" data-annotation="Self">
+          <img class="itemImage" src="../Images/Placeholder.png">
+          <p class="itemName">Vagina</p>
+          <p class="itemDescription">A standard female vagina</p>
+        </div>
+        <div class="itemBox largeBox" id="itemSelfPenis" data-annotation="Self">
+          <img class="itemImage" src="../Images/Placeholder.png">
+          <p class="itemName">Penis</p>
+          <p class="itemDescription">A standard male penis (and balls)</p>
+        </div>
+      </div>
+      <div class="textHeader">Your Body Type</div>
+      <div class="textBox">
+        <p>
+        Select your body type.<br><br>
+        </p>
+        <p class="selectNumber">Select One</p>
+      </div>
+      <div class="itemTray" id="itemTraySelfBody" data-limit=1>
+        <div class="itemBox" id="itemPetite" data-annotation="Self">
+          <img class="itemImage" src="../Images/Placeholder.png">
+          <p class="itemName">Petite</p>
+          <p class="itemDescription">
+          Significantly smaller in size and height than most. You would often be mistaken for being younger than you are.
+          </p>
+          <p class="months">+24</p>
+          <p class="points">-10</p>
+        </div>
+        <div class="itemBox" id="itemSelfDainty" data-annotation="Self">
+          <img class="itemImage" src="../Images/Placeholder.png">
+          <p class="itemName">Dainty</p>
+          <p class="itemDescription">
+          Thin and delicate. It looks natural upon your frame, but at times it looks like a swift breeze might knock you over.<br><br>
+          Fits well with most girls and with pretty boys.
+          </p>
+          <p class="months">+18</p>
+          <p class="points">-10</p>
+        </div>
+        <div class="itemBox" id="itemSelfThin" data-annotation="Self">
+          <img class="itemImage" src="../Images/Placeholder.png">
+          <p class="itemName">Thin</p>
+          <p class="itemDescription">
+          Thinner than the average. Your bones stick out a bit, making you look a little gawky and lanky.
+          </p>
+          <p class="months">+6</p>
+          <p class="points">-5</p>
+        </div>
+        <div class="itemBox" id="itemSelfAverage" data-annotation="Self">
+          <img class="itemImage" src="../Images/Placeholder.png">
+          <p class="itemName">Average</p>
+          <p class="itemDescription">
+          A fairly average build. Nothing special to speak of.
+          </p>
+        </div>
+        <div class="itemBox" id="itemSelfHourglass" data-annotation="Self">
+          <img class="itemImage" src="../Images/Placeholder.png">
+          <p class="itemName">Hourglass</p>
+          <p class="itemDescription">
+          Wide hips and chest but otherwise thin and with a startingly small waist.<br><br>
+          Traditionally sexy on a lady, but you may look a a little funny if you are a male.
+          </p>
+          <p class="months">+12</p>
+          <p class="points">-15</p>
+        </div>
+        <div class="itemBox" id="itemSelfCurvy" data-annotation="Self">
+          <img class="itemImage" src="../Images/Placeholder.png">
+          <p class="itemName">Curvy</p>
+          <p class="itemDescription">
+          You have some meat on your bones in all the right places. Not the same as being fat or chubby.
+          </p>
+          <p class="months">-5</p>
+          <p class="points">-10</p>
+        </div>
+        <div class="itemBox" id="itemSelfChubby" data-annotation="Self">
+          <img class="itemImage" src="../Images/Placeholder.png">
+          <p class="itemName">Chubby</p>
+          <p class="itemDescription">
+          A bit more fat on you than most would consider optimal.<br><br>
+          While others would indeed call you chubby, it isn't quite to the point where they would outright say fat.
+          </p>
+          <p class="points">+5</p>
+        </div>
+        <div class="itemBox" id="itemSelfFat" data-annotation="Self">
+          <img class="itemImage" src="../Images/Placeholder.png">
+          <p class="itemName">Fat</p>
+          <p class="itemDescription">
+          You are fat. At least whatever you're being fed here, you're clearly getting a lot of it.<br><br>
+          Clearly you were chosen for a reason though, as your master would have had plenty of better options.
+          </p>
+          <p class="points">+10</p>
+        </div>
+        <div class="itemBox" id="itemSelfToned" data-annotation="Self">
+          <img class="itemImage" src="../Images/Placeholder.png">
+          <p class="itemName">Toned</p>
+          <p class="itemDescription">
+          You clearly work out and it shows. Fit and toned, more along the lines of a runner or swimmer as opposed to a body builder.
+          </p>
+          <p class="points">-10</p>
+        </div>
+        <div class="itemBox" id="itemSelfMuscular" data-annotation="Self">
+          <img class="itemImage" src="../Images/Placeholder.png">
+          <p class="itemName">Muscular</p>
+          <p class="itemDescription">
+          Bulging with muscles.<br><br>
+          Interesting appearance for a sub, but perhaps your master just likes breaking in the tough looking ones.
+          </p>
+          <p class="points">-20</p>
+        </div>
+      </div>
+      <div class="textHeader">Your Appearance</div>
+      <div class="textBox">
+        <p>
+        Select your level of appearance.<br><br>
+        </p>
+        <p class="selectNumber">Select One</p>
+      </div>
+      <div class="itemTray" id="itemTraySelfAppearance" data-limit=1>
+        <div class="itemBox smallBox" id="itemSelfUnattractive" data-annotation="Self">
+          <img class="itemImage" src="../Images/Placeholder.png">
+          <p class="itemName">Unattractive</p>
+          <p class="itemDescription">
+          You would be considered unattractive by conventional standards.<br><br>
+          Your master must have some unique tastes.
+          </p>
+          <p class="months">+3</p>
+          <p class="points">+10</p>
+        </div>
+        <div class="itemBox smallBox" id="itemSelfPlain" data-annotation="Self">
+          <img class="itemImage" src="../Images/Placeholder.png">
+          <p class="itemName">Plain</p>
+          <p class="itemDescription">
+          You have a fairly plain appearance. Nobody would look twice.<br><br>
+          You must fit your master's particular tastes.
+          </p>
+          <p class="points">-5</p>
+        </div>
+        <div class="itemBox smallBox" id="itemSelfAboveAverage" data-annotation="Self">
+          <img class="itemImage" src="../Images/Placeholder.png">
+          <p class="itemName">Above Average</p>
+          <p class="itemDescription">
+          You are noticeable above average, enough to make people's gazes linger, if not necessarily turn for a second look.<br><br>
+          You have likely caught the eye of more than just your master.
+          </p>
+        </div>
+        <div class="itemBox smallBox" id="itemSelfAttractive" data-annotation="Self">
+          <img class="itemImage" src="../Images/Placeholder.png">
+          <p class="itemName">Attractive</p>
+          <p class="itemDescription">
+          You are very attractive and everybody knows it. Heads will turn, and you would fit right in among celebrities.<br><br>
+          A jewel in your master's eye. It is no wonder they sought to have you.
+          </p>
+          <p class="months">+12</p>
+          <p class="points">-10</p>
+        </div>
+        <div class="itemBox smallBox" id="itemSelfBreathtaking" data-annotation="Self">
+          <img class="itemImage" src="../Images/Placeholder.png">
+          <p class="itemName">Breathtaking</p>
+          <p class="itemDescription">
+          People stop and stare at the sight of you, almost disbelieving their own eyes. Very few people in the world could even begin to try and imagine such beauty.<br><br>
+          It would not be unusual if your master often has to fend off the interest of other parties on your behalf.
+          </p>
+          <p class="months">+24</p>
+          <p class="points">-20</p>
+        </div>
+      </div>
+      <div class="textHeader">Orders and Compulsions</div>
+      <div class="textBox">
+        <p>
+        Optional items consisting of orders dictating your behavior from your master, and actual mental comopulsions on you placed by us.<br><br>
+        If we are providing you with a new body, it would be terribly boring if your mind stayed entirely the same wouldn't it? There's no harm in a tiny bit of mind control here or there...
+        </p>
+      </div>
+      <div class="itemTray" id="itemTrayMental">
+        <div class="itemBox" id="itemLadylike">
+          <img class="itemImage" src="../Images/Placeholder.png">
+          <p class="itemName">Ladylike</p>
+          <p class="itemDescription">
+          Your master demands for you to act like a model of traditional femininity at all times. Elegant and demure. Failure to abide by this will result in punishment.<br><br>
+          Such a soft pretty little thing. How easily your master pushes you down and claims you as their own.
+          </p>
+          <p class="itemRestriction">itemMasculine</p>
+          <p class="points">7</p>
+        </div>
+        <div class="itemBox" id="itemMasculine">
+          <img class="itemImage" src="../Images/Placeholder.png">
+          <p class="itemName">Masculine</p>
+          <p class="itemDescription">
+          Your master demands for you to act like a model of traditional masculinity at all times. Tough and tough. Failure to abide by this will result in punishment.<br><br>
+          So strong, so proud. Your master enjoys breaking down types like you, seeing the defiance to turn acceptance.
+          </p>
+          <p class="itemRestriction">itemLadylike</p>
+          <p class="points">5</p>
+        </div>
+        <div class="itemBox" id="itemDevoted">
+          <img class="itemImage" src="../Images/Placeholder.png">
+          <p class="itemName">Devoted</p>
+          <p class="itemDescription">
+          Your master is the light of your life, the sun in your sky, the center of your world. You are hopelessly in love with them, which also makes you very eager to please.<br><br>
+          This will certainly make your time more enjoyable, but now not only will you be unable to refuse your master's wishes, you will be practically incapable of even fathoming why you would ever want to refuse.
+          </p>
+          <p class="itemRestriction">itemDespair</p>
+          <p class="points">10</p>
+        </div>
+        <div class="itemBox" id="itemDespair">
+          <img class="itemImage" src="../Images/Placeholder.png">
+          <p class="itemName">Despair</p>
+          <p class="itemDescription">
+          You hate your master, you hate this situation, but you also recognize that you have no way out until your time is up. Every second here fills you with despair, and every moment feels like an eternity.<br><br>
+          This seems like quite the unpleasant option if you plan on enjoying your time at all.
+          </p>
+          <p class="itemRestriction">itemDevoted</p>
+          <p class="points">15</p>
+        </div>
+        <div class="itemBox" id="itemlll">
+          <img class="itemImage" src="../Images/Placeholder.png">
+          <p class="itemName">Va</p>
+          <p class="itemDescription">A</p>
+        </div>
+        <div class="itemBox" id="itemlll">
+          <img class="itemImage" src="../Images/Placeholder.png">
+          <p class="itemName">Va</p>
+          <p class="itemDescription">A</p>
+        </div>
+        <div class="itemBox" id="itemlll">
+          <img class="itemImage" src="../Images/Placeholder.png">
+          <p class="itemName">Va</p>
+          <p class="itemDescription">A</p>
+        </div>
+        <div class="itemBox" id="itemlll">
+          <img class="itemImage" src="../Images/Placeholder.png">
+          <p class="itemName">Va</p>
+          <p class="itemDescription">A</p>
+        </div>
+      </div>
+      <div class="itemTray" id="itemTrayBodyMods">
+        <div class="itemBox" id="itemlll">
+          <img class="itemImage" src="../Images/Placeholder.png">
+          <p class="itemName">Va</p>
+          <p class="itemDescription">A</p>
+        </div>
+      </div>
+      <div class="itemTray" id="itemTrayEnhancements">
+        <div class="itemBox" id="itemlll">
+          <img class="itemImage" src="../Images/Placeholder.png">
+          <p class="itemName">Va</p>
+          <p class="itemDescription">A</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="screen" id="screenMaster">
+      <div class="itemTray" id="itemTrayMasterGenitals">
+        <div class="itemBox largeBox" id="itemMasterVagina" data-annotation="Master">
+          <img class="itemImage" src="../Images/Placeholder.png">
+          <p class="itemName">Vagina</p>
+          <p class="itemDescription">A standard female vagina</p>
+        </div>
+        <div class="itemBox largeBox" id="itemMasterPenis" data-annotation="Master">
+          <img class="itemImage" src="../Images/Placeholder.png">
+          <p class="itemName">Penis</p>
+          <p class="itemDescription">A standard male penis (and balls)</p>
+        </div>
+      </div>
+      <div class="itemTray" id="itemTrayMasterBody" data-limit=1>
+        <div class="itemBox" id="itemPetite" data-annotation="Master">
+          <img class="itemImage" src="../Images/Placeholder.png">
+          <p class="itemName">Petite</p>
+          <p class="itemDescription">
+          Significantly smaller in size and height than most. Small though they might be, you are still the one that calls them master.
+          </p>
+          <p class="points">-10</p>
+        </div>
+        <div class="itemBox" id="itemMasterDainty" data-annotation="Master">
+          <img class="itemImage" src="../Images/Placeholder.png">
+          <p class="itemName">Dainty</p>
+          <p class="itemDescription">
+          Thin and delicate. Despite the perceived physical fragility, your master still has no trouble bending you to their whims.
+          </p>
+          <p class="points">-10</p>
+        </div>
+        <div class="itemBox" id="itemMasterThin" data-annotation="Master">
+          <img class="itemImage" src="../Images/Placeholder.png">
+          <p class="itemName">Thin</p>
+          <p class="itemDescription">
+          Thin and tall. Your master does not need to be physically imposing to bring you to heel.
+          </p>
+          <p class="points">-5</p>
+        </div>
+        <div class="itemBox" id="itemMasterAverage" data-annotation="Master">
+          <img class="itemImage" src="../Images/Placeholder.png">
+          <p class="itemName">Average</p>
+          <p class="itemDescription">
+          Average.
+          </p>
+        </div>
+        <div class="itemBox" id="itemMasterHourglass" data-annotation="Master">
+          <img class="itemImage" src="../Images/Placeholder.png">
+          <p class="itemName">Hourglass</p>
+          <p class="itemDescription">
+          Big hips, big chest, itty bitty waist.<br><br>
+          Your master has quite the bombshell appearance.
+          </p>
+          <p class="months">+6</p>
+          <p class="points">-15</p>
+        </div>
+        <div class="itemBox" id="itemMasterCurvy" data-annotation="Master">
+          <img class="itemImage" src="../Images/Placeholder.png">
+          <p class="itemName">Curvy</p>
+          <p class="itemDescription">
+          All the right curves in all the right places. 
+          </p>
+          <p class="months">-5</p>
+          <p class="points">-10</p>
+        </div>
+        <div class="itemBox" id="itemMasterChubby" data-annotation="Master">
+          <img class="itemImage" src="../Images/Placeholder.png">
+          <p class="itemName">Chubby</p>
+          <p class="itemDescription">
+          A bit chubbier than the norm.
+          </p>
+          <p class="points">+5</p>
+        </div>
+        <div class="itemBox" id="itemMasterFat" data-annotation="Master">
+          <img class="itemImage" src="../Images/Placeholder.png">
+          <p class="itemName">Fat</p>
+          <p class="itemDescription">
+          Your master is quite fat, unpleasantly so.
+          </p>
+          <p class="points">+10</p>
+        </div>
+        <div class="itemBox" id="itemMasterToned" data-annotation="Master">
+          <img class="itemImage" src="../Images/Placeholder.png">
+          <p class="itemName">Toned</p>
+          <p class="itemDescription">
+          Nice abs, strong arms, glutes you could bounce a coin off of.<br><br>
+          A quite fitting appearance for your master to have.
+          </p>
+          <p class="months">+3</p>
+          <p class="points">-5</p>
+        </div>
+        <div class="itemBox" id="itemMasterMuscular" data-annotation="Master">
+          <img class="itemImage" src="../Images/Placeholder.png">
+          <p class="itemName">Muscular</p>
+          <p class="itemDescription">
+          An immensely imposing figure.<br><br>
+          Even if they were not your master, it is doubtful you could do anything to stop them from doing as they wish to you.
+          </p>
+          <p class="months">+6</p>
+          <p class="points">-10</p>
+        </div>
+      </div>
+      <div class="itemTray" id="itemTrayMasterAppearance" data-limit=1>
+        <div class="itemBox smallBox" id="itemMasterUnattractive" data-annotation="Master">
+          <img class="itemImage" src="../Images/Placeholder.png">
+          <p class="itemName">Unattractive</p>
+          <p class="itemDescription">
+          Your master is quite unattractive.<br><br>
+          You might want to go for the blindfold option.
+          </p>
+          <p class="points">+10</p>
+        </div>
+        <div class="itemBox smallBox" id="itemMasterPlain" data-annotation="Master">
+          <img class="itemImage" src="../Images/Placeholder.png">
+          <p class="itemName">Plain</p>
+          <p class="itemDescription">
+          Your master has a very average appearance.<br><br>
+          Could be worse I suppose. It certainly does not affect their performance in the bedroom.
+          </p>
+          <p class="points">-5</p>
+        </div>
+        <div class="itemBox smallBox" id="itemMasterAboveAverage" data-annotation="Master">
+          <img class="itemImage" src="../Images/Placeholder.png">
+          <p class="itemName">Above Average</p>
+          <p class="itemDescription">
+          Your master is noticeably if not necessarily exceptionally attractive, and they definitely make it work.<br><br>
+          If you are going to have a master, it is good that they are easy on the eyes.
+          </p>
+        </div>
+        <div class="itemBox smallBox" id="itemMasterAttractive" data-annotation="Master">
+          <img class="itemImage" src="../Images/Placeholder.png">
+          <p class="itemName">Attractive</p>
+          <p class="itemDescription">
+          Your master is extremely attractive and they know it full well.<br><br>
+          Just for their appearance alone many people would be willing to go far in an attempt to bed your master.
+          </p>
+          <p class="points">-10</p>
+        </div>
+        <div class="itemBox smallBox" id="itemMasterBreathtaking" data-annotation="Master">
+          <img class="itemImage" src="../Images/Placeholder.png">
+          <p class="itemName">Breathtaking</p>
+          <p class="itemDescription">
+          A worldclass appearance almost without equal. People bow and scrape hoping for the slightest bit of favour from your master.<br><br>
+          Your master is basically a fantasy come to life, casually 
+          </p>
+          <p class="points">-20</p>
+        </div>
+      </div>
+      <div class="itemTray" id="itemTrayMasterWealth" data-limit=1>
+        <div class="itemBox" id="itemWealth_1_Humble">
+          <img class="itemImage" src="../Images/Placeholder.png">
+          <p class="itemName">Humble</p>
+          <p class="itemDescription">This is the description for a selectable item</p>
+          <p class="points">10</p>
+          <p class="months">-6</p>
+          <p class="testOutput"></p>
+        </div>
+        <div class="itemBox" id="itemWealth_2_WellOff">
+          <img class="itemImage" src="../Images/Placeholder.png">
+          <p class="itemName">Well-off</p>
+          <p class="itemDescription">This is the description for a selectable item</p>
+          <p class="testOutput"></p>
+        </div>
+        <div class="itemBox" id="itemWealth_3_Wealthy">
+          <img class="itemImage" src="../Images/Placeholder.png">
+          <p class="itemName">Wealthy</p>
+          <p class="itemDescription">This is the description for a selectable item</p>
+          <p class="points">-10</p>
+          <p class="months">+12</p>
+          <p class="testOutput"></p>
+        </div>
+        <div class="itemBox" id="itemWealth_4_Opulent">
+          <img class="itemImage" src="../Images/Placeholder.png">
+          <p class="itemName">Opulent</p>
+          <p class="itemDescription">This is the description for a selectable item</p>
+          <p class="points">-20</p>
+          <p class="months">+24</p>
+          <p class="testOutput"></p>
+        </div>
+      </div>
+      <div class="itemTray" id="itemTrayM1">
+        <div class="itemBox" id="itemM1">
+          <img class="itemImage" src="../Images/Placeholder.png">
+          <p class="itemName">Master</p>
+          <p class="itemDescription">This is the description for a selectable item</p>
+          <p class="itemRequirement"></p>
+          <p class="itemRestriction"></p>
+          <p class="points">+5</p>
+        </div>
+        <div class="itemBox" id="testMast">
+          <img class="itemImage" src="../Images/Placeholder.png">
+          <p class="itemName">asdfsda</p>
+          <p class="itemDescription">This is the description for a selectable item</p>
+          <p class="itemRequirement">itemWealth_3_Wealthy</p>
+          <p class="itemRestriction"></p>
+          <p class="points">+5</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="screen" id="screenConditions">
+      <div class="itemTray" id="itemTrayCondMisc">
+        <div class="itemBox" id="itemAttendant">
+          <img class="itemImage" src="../Images/Placeholder.png">
+          <p class="itemName">Attendant</p>
+          <p class="itemDescription">This is the description for a selectable item</p>
+          <p class="itemRequirement">itemWealth_3_Wealthy</p>
+          <p class="itemRestriction"></p>
+          <p class="points">+5</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="screen" id="screenSe">
+      <div class="itemTray" id="itemTraySe1">
+        <div class="itemBox" id="itemSe1">
+          <img class="itemImage" src="../Images/Placeholder.png">
+          <p class="itemName">Se</p>
+          <p class="itemDescription">This is the description for a selectable item</p>
+          <p class="itemRequirement"></p>
+          <p class="itemRestriction"></p>
+          <p class="points">+5</p>
+        </div>
+      </div>
+      <div class="itemTray" id="itemTrayBond">
+        <div class="itemBox" id="itemBond">
+          <img class="itemImage" src="../Images/Placeholder.png">
+          <p class="itemName">Bond</p>
+          <p class="itemDescription">This is the description for a selectable item</p>
+        </div>
+        <hr>
+        <div class="itemBox" id="itemBond2">
+          <img class="itemImage" src="../Images/Placeholder.png">
+          <p class="itemName">Se</p>
+          <p class="itemDescription">This is the description for a selectable item</p>
+        </div>
+        <div class="itemBox" id="itemBond3">
+          <img class="itemImage" src="../Images/Placeholder.png">
+          <p class="itemName">Se</p>
+          <p class="itemDescription">This is the description for a selectable item</p>
+        </div>
+        <div class="itemBox" id="itemBond4">
+          <img class="itemImage" src="../Images/Placeholder.png">
+          <p class="itemName">Se</p>
+          <p class="itemDescription">This is the description for a selectable item</p>
+        </div>
+        <div class="itemBox" id="itemBond5">
+          <img class="itemImage" src="../Images/Placeholder.png">
+          <p class="itemName">Se</p>
+          <p class="itemDescription">This is the description for a selectable item</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="screen" id="screenExtreme">
+      <div class="itemTray" id="itemTrayEx1">
+        <div class="itemBox" id="itemEx1">
+          <img class="itemImage" src="../Images/Placeholder.png">
+          <p class="itemName">Extreme</p>
+          <p class="itemDescription">This is the description for a selectable item</p>
+          <p class="itemRequirement"></p>
+          <p class="itemRestriction"></p>
+          <p class="points">+5</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="screen" id="screenEnd">
+      <div class="itemTray" id="itemTrayEn1">
+        <div class="itemBox" id="itemEn1">
+          <img class="itemImage" src="../Images/Placeholder.png">
+          <p class="itemName">End</p>
+          <p class="itemDescription">This is the description for a selectable item</p>
+          <p class="itemRequirement"></p>
+          <p class="itemRestriction"></p>
+          <p class="points">+5</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="scoreBox" id="boxMonths">0</div>
+  <div class="scoreBox" id="boxPoints">0</div>
+  <div id="bottomBuffer"></div>
+  
+
+  </body>
+</html>
