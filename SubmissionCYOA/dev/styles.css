@@ -1,12 +1,27 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --farBackgroundColor: black;
+  --mainBackgroundColor: #576066;
+  
+  --screenButtonColor: #484A47;
+  --screenButtonBorderColor: black;
+  
+  --textBoxColor: #353531;
+  --textBoxBorderColor: black;
+  
+  --itemTrayColor: #2D3142;
+  --itemTrayBorderColor: black;
+  
+  --itemCardColor: #B3B5BB;
+  --itemCardBorderColor: black;
+}
+
 body
 {
   text-align: center;
-  
-  background-color: black;
-  
+  background-color: var(--farBackgroundColor);
   font-family: 'Verdana';
-  font-size: 0.9em;
 }
 
 /*
@@ -29,8 +44,7 @@ p{pointer-events: none;}
 {
   display: inline-block;
   text-align: center;
-  background-color: gray;
-  border: 2px solid rgba(0, 255, 0, 1);
+  background-color: var(--mainBackgroundColor);
   
   width: 80vw;
   
@@ -39,10 +53,7 @@ p{pointer-events: none;}
 .screen
 {
   display: inline-block;
-  
-  border: 2px solid rgba(255, 0, 0, 1);
-  
-  width: 90%;
+  width: 94%;
 }
 
 #bottomBuffer
@@ -55,8 +66,6 @@ p{pointer-events: none;}
   border-width: 5px;
   border-style: outset;
   border-color: hotpink;
-  border-radius: 10px;
-  background-color: orange;
   
   position: fixed;
   bottom: 0;
@@ -65,7 +74,8 @@ p{pointer-events: none;}
   width: 100px;
   height: 100px;
   
-  font-size: 60px;
+  font-size: 50px;
+  font-family: 'Impact';
   line-height: 90px;
 }
 
@@ -83,6 +93,16 @@ p{pointer-events: none;}
   right: 0;
 }
 
+img
+{
+  pointer-events: none;
+  display: none;
+  
+  border-width: 5px;
+  border-style: groove;
+  border-color: silver;
+}
+
 /*
 * Title Box
 */
@@ -96,9 +116,6 @@ p{pointer-events: none;}
   border: 2px solid rgba(0, 0, 0, 1);
   
   width: 100%;
-  /*
-  width: 80vw;
-  min-width: 400px;*/
   
   text-align: center;
 }
@@ -114,12 +131,18 @@ p{pointer-events: none;}
 
 .screenButton
 {
+  background-color: var(--screenButtonColor);
+  border-color: var(--screenButtonBorderColor);
+  
   border-width: 5px;
   border-style: outset;
-  border-color: hotpink;
   border-radius: 10px;
+  
   width: 25%;
   cursor: default;
+  /*
+  height: 50px;
+  line-height: 40px;*/
 }
 
 
@@ -127,15 +150,31 @@ p{pointer-events: none;}
 * Textboxes
 */
 
-.textHeader
+.textPageHeader
 {
-  background-color: black;
-  border-color: aqua;
+  background-color: var(--textBoxColor);
+  border-color: var(--textBoxBorderColor);
   border-width: 5px;
   border-style: solid;
   
   color: white;
-  font-size: 2.3em;
+  font-size: 3rem;
+  font-family: 'Permanent Marker', 'Times New Roman';
+  
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 2px;
+}
+
+.textHeader
+{
+  background-color: var(--textBoxColor);
+  border-color: var(--textBoxBorderColor);
+  border-width: 5px;
+  border-style: solid;
+  
+  color: white;
+  font-size: 2.3rem;
   font-family: 'Permanent Marker', 'Times New Roman';
   
   padding: 10px;
@@ -145,15 +184,30 @@ p{pointer-events: none;}
 
 .textBox
 {
-  background-color: black;
-  border-color: maroon;
+  background-color: var(--textBoxColor);
+  border-color: var(--textBoxBorderColor);
   border-width: 5px;
   border-style: solid;
   
   color: white;
-  font-size: 1.2em;
+  font-size: 0.9rem;
   
   padding: 10px;
+  overflow: auto;
+}
+
+.guideSpeech
+{
+  color: darkkhaki;
+  font-family: 'Charm';
+  font-size: 1.2rem;
+}
+
+.normalText
+{
+  color: white;
+  font-family: 'Verdana';
+  font-size: 0.9rem;
 }
 
 .selectNumber
@@ -161,6 +215,23 @@ p{pointer-events: none;}
   font-style: italic;
 }
 
+#introImage1
+{
+  float: left;
+  height: 400px;
+}
+
+#introImage2
+{
+  float: right;
+  width: 400px;
+}
+
+#introImage3
+{
+  float: left;
+  height: 400px;
+}
 
 /*
 * Items
@@ -172,9 +243,11 @@ p{pointer-events: none;}
   justify-content: space-around;
   flex-wrap: wrap;
   
-  border: 2px solid rgba(0, 0, 1, 1);
+  border-width: 5px;
+  border-style: double;
+  border-color: var(--itemTrayBorderColor);
   
-  background-color: blue;
+  background-color: var(--itemTrayColor);
   margin-top: 10px;
   margin-bottom: 20px;
 }
@@ -183,42 +256,49 @@ p{pointer-events: none;}
 {
   border-width: 5px;
   border-style: double;
-  border-color: grey;
+  border-color: var(--itemCardBorderColor);
+  border-radius: 10px;
   
-  
+  font-size: 0.85rem;
   width: 21.25%;
   padding: 5px;
   margin-top: 10px;
   margin-bottom: 10px;
-  background-color: honeydew;
+  background-color: var(--itemCardColor);
   cursor: pointer;
 }
 
 .itemBox.smallBox
 {
-  width: 19%;
+  width: 19.6%;
 }
   
 .itemBox.largeBox
 {
-  width: 31.67%;
+  width: 32.67%;
 }
 
-img
+.itemImage
 {
-  max-width: 90%;
-  pointer-events: none;
+  width: 100%;
 }
 
 .itemName
 {
-  font-size: 1.6em;
+  font-size: 1.6rem;
   font-family: 'Stylish', "Times New Roman";
 }
 
 .itemDescription
 {
   
+}
+
+.itemGuideSpeech
+{
+  color: darkkhaki;
+  font-family: 'Charm';
+  font-size: 1rem;
 }
 
 .itemRequirement
@@ -252,12 +332,12 @@ hr
 {
   .itemBox, .itemBox.largeBox
   {
-    width: 47.5%;
+    width: 49%;
   }
   
   .itemBox.smallBox
   {
-    width: 31.67%;
+    width: 32.67%;
   }
   
   .screenButton
@@ -270,7 +350,7 @@ hr
 {
   .itemBox, .itemBox.smallBox, .itemBox.largebox
   {
-    width: 95%;
+    width: 98%;
   }
 }
 
