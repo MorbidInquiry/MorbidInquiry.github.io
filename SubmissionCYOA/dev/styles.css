@@ -96,8 +96,9 @@ p{pointer-events: none;}
 img
 {
   pointer-events: none;
+  /*
   display: none;
-  
+  */
   border-width: 5px;
   border-style: groove;
   border-color: silver;
