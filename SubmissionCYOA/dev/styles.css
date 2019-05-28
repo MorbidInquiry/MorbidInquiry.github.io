@@ -7,14 +7,26 @@
   --screenButtonColor: #484A47;
   --screenButtonBorderColor: black;
   
+  --textHeaderColor: #252522;
+  --textHeaderBorderColor: black;
+  
   --textBoxColor: #353531;
   --textBoxBorderColor: black;
+  --textBoxTextColor: white;
+  --specialTextColor: #8C8122;
   
   --itemTrayColor: #2D3142;
   --itemTrayBorderColor: black;
   
-  --itemCardColor: #B3B5BB;
+  --itemCardColor: #A1AAC2;
   --itemCardBorderColor: black;
+  --itemBoxTextColor: black;
+  --costPointsTextColor: red;
+  --gainPointsTextColor: green;
+  --moreMonthsTextColor: red;
+  --lessMonthsTextColor: green;
+  --requirementTextColor: darkorange;
+  --restrictionTextColor: darkred;
 }
 
 body
@@ -22,6 +34,7 @@ body
   text-align: center;
   background-color: var(--farBackgroundColor);
   font-family: 'Verdana';
+  user-select: none;
 }
 
 /*
@@ -153,8 +166,8 @@ img
 
 .textPageHeader
 {
-  background-color: var(--textBoxColor);
-  border-color: var(--textBoxBorderColor);
+  background-color: var(--textHeaderColor);
+  border-color: var(--textHeaderBorderColor);
   border-width: 5px;
   border-style: solid;
   
@@ -199,14 +212,14 @@ img
 
 .guideSpeech
 {
-  color: darkkhaki;
+  color: var(--specialTextColor);
   font-family: 'Charm';
   font-size: 1.2rem;
 }
 
 .normalText
 {
-  color: white;
+  color: var(--textBoxTextColor);
   font-family: 'Verdana';
   font-size: 0.9rem;
 }
@@ -257,11 +270,12 @@ img
 {
   border-width: 5px;
   border-style: double;
-  border-color: var(--itemCardBorderColor);
+  border-color: var(--itemBoxTextColor);
   border-radius: 10px;
   
   font-size: 0.85rem;
-  width: 21.25%;
+  color: var(--item);
+  width: 24.5%;
   padding: 5px;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -297,24 +311,31 @@ img
 
 .itemGuideSpeech
 {
-  color: darkkhaki;
+  color: var(--specialTextColor);
   font-family: 'Charm';
   font-size: 1rem;
 }
 
 .itemRequirement
 {
-  color: darkorange;
+  color: var(--requirementTextColor);
 }
 
 .itemRestriction
 {
-  color: darkred;
+  color: var(--restrictionTextColor);
 }
 
 .points
 {
-  
+  font-weight: bold;
+  font-family: arial black;
+}
+
+.months
+{
+  font-weight: bold;
+  font-family: arial black;
 }
 
 hr

@@ -174,9 +174,15 @@ function writePoints(item)
   var points = Math.abs($(item).data('pointModifier'));
   
   if ($(item).data('pointModifier') < 0)
+  {
     item.getElementsByClassName('points')[0].innerHTML = 'Costs ' + points + ' points';
+    item.getElementsByClassName('points')[0].style.color = getComputedStyle(document.documentElement).getPropertyValue('--costPointsTextColor');
+  }
   else
+  {
     item.getElementsByClassName('points')[0].innerHTML = 'Gain ' + points + ' points';
+    item.getElementsByClassName('points')[0].style.color = getComputedStyle(document.documentElement).getPropertyValue('--gainPointsTextColor');
+  }
   
   if (points == 1)
   {
@@ -190,9 +196,15 @@ function writeMonths(item)
   var months = Math.abs($(item).data('monthModifier'));
   
   if ($(item).data('monthModifier') < 0)
+  {
     item.getElementsByClassName('months')[0].innerHTML = 'Serve ' + months + ' less months';
+    item.getElementsByClassName('months')[0].style.color = getComputedStyle(document.documentElement).getPropertyValue('--lessMonthsTextColor');
+  }
   else
+  {
     item.getElementsByClassName('months')[0].innerHTML = 'Serve ' + months + ' more months';
+    item.getElementsByClassName('months')[0].style.color = getComputedStyle(document.documentElement).getPropertyValue('--moreMonthsTextColor');
+  }
   
   if (months == 1)
   {
