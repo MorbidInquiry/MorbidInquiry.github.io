@@ -35,7 +35,7 @@
         Very quickly you realize you have no body at all. you cannot even speak. A moment's thought has you realize that even your memories seem quite fuzzy.<br><br>
         Strangely enough, all of this has you quite unconcerned.
         </p>
-        <img id="introImage1" src="../Images/Introduction/Intro1_1.png">
+        <img id="introImage1" src="../Images/Introduction/Intro/Intro1_1.png">
         <p class="guideSpeech">
         "Ah. Awake now are you?
         </p>
@@ -62,7 +62,7 @@
         Then this supernaturally beautiful woman appeared, with wings of all things on her back. Something in the back of your mind starts niggling at you about this scenario.<br><br>
         Your eyes lock back on her as she begins to move. You trace the sensual movements of her body, as she seemingly settles in to make herself comfortable before continuing.
         </p>
-        <img id="introImage2" src="../Images/Introduction/Intro2_1.png">
+        <img id="introImage2" src="../Images/Introduction/Intro/Intro2_1.png">
         <p class="guideSpeech">
         "You modern humans seem to adjust pretty well to this whole thing with a quick explanation so let's get right to it.
         I'm told that you have stories of people being brought forth into other worlds to serve a purpose, correct?"
@@ -92,7 +92,7 @@
         <p>
         What.
         </p>
-        <img id="introImage3" src="../Images/Introduction/Intro3_1.png">
+        <img id="introImage3" src="../Images/Introduction/Intro/Intro3_1.png">
         <p class="guideSpeech">
         "Oh come now,"
         <span class="normalText">she drawls, still looking amused.</span>
@@ -126,7 +126,7 @@
         a
         </p>
       </div>
-      <div class="textHeader">Status</div>
+      <div class="textHeader">Relationship</div>
       <div class="textBox">
         <p>
         Select the official relationship between you and your master.
@@ -138,43 +138,21 @@
         Select One
         </p>
       </div>
-      <div class="itemTray" id="itemTrayIntroStatus" data-limit=1>
-        <div class="itemBox smallBox" id="itemSpouse">
-          <img class="itemImage" src="../Images/Introduction/Spouse_1.png">
-          <p class="itemName">Spouse</p>
+      <div class="itemTray" id="itemTrayIntroRelationship" data-limit=1>
+        <div class="itemBox smallBox" id="itemSlave">
+          <img class="itemImage" src="../Images/Introduction/Relationship/Slave_1.png">
+          <p class="itemName">Slave</p>
           <p class="itemDescription">
-          You will be the legal spouse of your master.
+          Or "indentured servant" as it may be. Slevery is not technically legal here, but your master all but owns you outright in every way that matters.
           </p>
           <p class="itemGuideSpeech">
-          "Aiming high huh? Spouse or not, your master is still the one wearing the metaphorical pants in the relationship."
+          "Well now, in for a penny in for a pound right? Now you don't have to worry about anything except pleasing your master's every sexual desire."
           </p>
-          <p class="points">-20</p>
-          <p class="months">12</p>
-        </div>
-        <div class="itemBox smallBox" id="itemLover">
-          <img class="itemImage" src="../Images/Introduction/Lover_1.png">
-          <p class="itemName">Lover</p>
-          <p class="itemDescription">
-          Mistress, concubine, whatever other term you wish to use. You are not quite married, but you are acknowledged as involved with your master.
-          </p>
-          <p class="itemGuideSpeech">
-          "Mm, you have some status and position in the household here, but that position is also very clearly below your master."
-          </p>
-          <p class="points">-10</p>
-          <p class="months">6</p>
-        </div>
-        <div class="itemBox smallBox" id="itemVoluntarySub">
-          <img class="itemImage" src="../Images/Introduction/VoluntarySub_1.png">
-          <p class="itemName">Voluntary Sub</p>
-          <p class="itemDescription">
-          You lack an official position, akin to a guest in the house, one whose purpose here is to serve the master sexually.
-          </p>
-          <p class="itemGuideSpeech">
-          "No fuss, no muss. You are just here to have some 'fun' with your master."
-          </p>
+          <p class="points">10</p>
+          <p class="months">-6</p>
         </div>
         <div class="itemBox smallBox" id="itemServant">
-          <img class="itemImage" src="../Images/Introduction/Servant_1.png">
+          <img class="itemImage" src="../Images/Introduction/Relationship/Servant_1.png">
           <p class="itemName">Servant</p>
           <p class="itemDescription">
           You will take a position as a servant, a maid or butler.
@@ -186,17 +164,39 @@
           <p class="points">10</p>
           <p class="months">-6</p>
         </div>
-        <div class="itemBox smallBox" id="itemSlave">
-          <img class="itemImage" src="../Images/Introduction/Slave_1.png">
-          <p class="itemName">Slave</p>
+        <div class="itemBox smallBox" id="itemVoluntarySub">
+          <img class="itemImage" src="../Images/Introduction/Relationship/VoluntarySub_1.png">
+          <p class="itemName">Voluntary Sub</p>
           <p class="itemDescription">
-          Or "indentured servant" as it may be. Slevery is not technically legal here, but your master all but owns you outright in every way that matters.
+          You lack an official position, akin to a guest in the house, one whose purpose here is to serve the master sexually.
           </p>
           <p class="itemGuideSpeech">
-          "Well now, in for a penny in for a pound right? Now you don't have to worry about anything except pleasing your master's every sexual desire."
+          "No fuss, no muss. You are just here to have some 'fun' with your master."
           </p>
-          <p class="points">10</p>
-          <p class="months">-6</p>
+        </div>
+        <div class="itemBox smallBox" id="itemLover">
+          <img class="itemImage" src="../Images/Introduction/Relationship/Lover_1.png">
+          <p class="itemName">Lover</p>
+          <p class="itemDescription">
+          Mistress, concubine, whatever other term you wish to use. You are not quite married, but you are acknowledged as involved with your master.
+          </p>
+          <p class="itemGuideSpeech">
+          "Mm, you have some status and position in the household here, but that position is also very clearly below your master."
+          </p>
+          <p class="points">-10</p>
+          <p class="months">6</p>
+        </div>
+        <div class="itemBox smallBox" id="itemSpouse">
+          <img class="itemImage" src="../Images/Introduction/Relationship/Spouse_1.png">
+          <p class="itemName">Spouse</p>
+          <p class="itemDescription">
+          You will be the legal spouse of your master.
+          </p>
+          <p class="itemGuideSpeech">
+          "Aiming high huh? Spouse or not, your master is still the one wearing the metaphorical pants in the relationship."
+          </p>
+          <p class="points">-20</p>
+          <p class="months">12</p>
         </div>
       </div>
       <div class="textHeader">Master's Feelings</div>
@@ -211,7 +211,7 @@
       </div>
       <div class="itemTray" id="itemTrayIntroMasterFeelings" data-limit=1>
         <div class="itemBox smallBox" id="itemIntroDespised">
-          <img class="itemImage" src="../Images/Introduction/Despised_1.png">
+          <img class="itemImage" src="../Images/Introduction/MasterFeelings/Despised_1.png">
           <p class="itemName">Despised</p>
           <p class="itemDescription">
           Your master hates you deeply for some reason or another and it definitely shows.<br><br>
@@ -224,7 +224,7 @@
           <p class="months">-6</p>
         </div>
         <div class="itemBox smallBox" id="itemDisdain">
-          <img class="itemImage" src="../Images/Introduction/Disdain_1.png">
+          <img class="itemImage" src="../Images/Introduction/MasterFeelings/Disdain_1.png">
           <p class="itemName">Disdain</p>
           <p class="itemDescription">
           Your master does not seem to care much for you, looking down upon your person.<br><br>
@@ -237,7 +237,7 @@
           <p class="months">-3</p>
         </div>
         <div class="itemBox smallBox" id="itemNeutral">
-          <img class="itemImage" src="../Images/Introduction/Neutral_1.png">
+          <img class="itemImage" src="../Images/Introduction/MasterFeelings/Neutral_1.png">
           <p class="itemName">Neutral</p>
           <p class="itemDescription">
           Your master has no strong feelings one way or another about you. This might as well be a business arrangment, albeit one for sex.<br><br>
@@ -248,7 +248,7 @@
           </p>
         </div>
         <div class="itemBox smallBox" id="itemLiked">
-          <img class="itemImage" src="../Images/Introduction/Liked_1.png">
+          <img class="itemImage" src="../Images/Introduction/MasterFeelings/Liked_1.png">
           <p class="itemName">Liked</p>
           <p class="itemDescription">
           Your master seems to like you. It's a little unclear if it is as a friend, or if there might be some genuine affection there.<br><br>
@@ -261,7 +261,7 @@
           <p class="months">12</p>
         </div>
         <div class="itemBox smallBox" id="itemBeloved">
-          <img class="itemImage" src="../Images/Introduction/Beloved_1.png">
+          <img class="itemImage" src="../Images/Introduction/MasterFeelings/Beloved_1.png">
           <p class="itemName">Beloved</p>
           <p class="itemDescription">
           Your master is genuinely head over heels in love with you.<br><br>
@@ -515,7 +515,7 @@
       </div>
       <div class="itemTray" id="itemTraySelfBody" data-limit=1>
         <div class="itemBox" id="itemPetite" data-annotation="Self">
-          <img class="itemImage" src="../Images/Placeholder.png">
+          <img class="itemImage" src="../Images/Self/Body/Petite_1.png">
           <p class="itemName">Petite</p>
           <p class="itemDescription">
           Significantly smaller in size and height than most.
@@ -528,7 +528,7 @@
           <p class="points">-10</p>
         </div>
         <div class="itemBox" id="itemSelfThin" data-annotation="Self">
-          <img class="itemImage" src="../Images/Placeholder.png">
+          <img class="itemImage" src="../Images/Self/Body/Thin_1.png">
           <p class="itemName">Thin</p>
           <p class="itemDescription">
           Naturally thin. A girl would be called dainty.
@@ -541,7 +541,7 @@
           <p class="points">-5</p>
         </div>
         <div class="itemBox" id="itemSelfAverage" data-annotation="Self">
-          <img class="itemImage" src="../Images/Placeholder.png">
+          <img class="itemImage" src="../Images/Self/Body/Average_1.png">
           <p class="itemName">Average</p>
           <p class="itemDescription">
           A fairly average build. Nothing special to speak of.
@@ -551,7 +551,7 @@
           </p>
         </div>
         <div class="itemBox" id="itemSelfHourglass" data-annotation="Self">
-          <img class="itemImage" src="../Images/Placeholder.png">
+          <img class="itemImage" src="../Images/Self/Body/Hourglass_1.png">
           <p class="itemName">Hourglass</p>
           <p class="itemDescription">
           Wide hips and chest but otherwise thin and with a startingly small waist.
@@ -564,7 +564,7 @@
           <p class="points">-15</p>
         </div>
         <div class="itemBox" id="itemSelfCurvy" data-annotation="Self">
-          <img class="itemImage" src="../Images/Placeholder.png">
+          <img class="itemImage" src="../Images/Self/Body/Curvy_1.png">
           <p class="itemName">Curvy</p>
           <p class="itemDescription">
           You have a bit more meat on your bones than average, but luckily it's in all the right places.
@@ -587,7 +587,7 @@
           <p class="points">+10</p>
         </div>
         <div class="itemBox" id="itemSelfToned" data-annotation="Self">
-          <img class="itemImage" src="../Images/Placeholder.png">
+          <img class="itemImage" src="../Images/Self/Body/Toned_1.png">
           <p class="itemName">Toned</p>
           <p class="itemDescription">
           Fit and toned with visibly defined but not large muscles.
@@ -599,7 +599,7 @@
           <p class="points">-10</p>
         </div>
         <div class="itemBox" id="itemSelfMuscular" data-annotation="Self">
-          <img class="itemImage" src="../Images/Placeholder.png">
+          <img class="itemImage" src="../Images/Self/Body/Muscular_1.png">
           <p class="itemName">Muscular</p>
           <p class="itemDescription">
           Bulging with muscles.
@@ -1041,7 +1041,7 @@
       </div>
       <div class="itemTray" id="itemTrayMasterBody" data-limit=1>
         <div class="itemBox" id="itemPetite" data-annotation="Self">
-          <img class="itemImage" src="../Images/Placeholder.png">
+          <img class="itemImage" src="../Images/Master/Body/Petite_1.png">
           <p class="itemName">Petite</p>
           <p class="itemDescription">
           Significantly smaller in size and height than most.
@@ -1054,7 +1054,7 @@
           <p class="points">-10</p>
         </div>
         <div class="itemBox" id="itemMasterThin" data-annotation="Master">
-          <img class="itemImage" src="../Images/Placeholder.png">
+          <img class="itemImage" src="../Images/Master/Body/Thin_1.png">
           <p class="itemName">Thin</p>
           <p class="itemDescription">
           Naturally thin. A girl would be called dainty.
@@ -1067,7 +1067,7 @@
           <p class="points">-5</p>
         </div>
         <div class="itemBox" id="itemMasterAverage" data-annotation="Master">
-          <img class="itemImage" src="../Images/Placeholder.png">
+          <img class="itemImage" src="../Images/Master/Body/Average_1.png">
           <p class="itemName">Average</p>
           <p class="itemDescription">
           A fairly average build. Nothing special to speak of.
@@ -1077,7 +1077,7 @@
           </p>
         </div>
         <div class="itemBox" id="itemMasterHourglass" data-annotation="Master">
-          <img class="itemImage" src="../Images/Placeholder.png">
+          <img class="itemImage" src="../Images/Master/Body/Hourglass_1.png">
           <p class="itemName">Hourglass</p>
           <p class="itemDescription">
           Wide hips and chest but otherwise thin and with a startingly small waist.
@@ -1090,7 +1090,7 @@
           <p class="points">-15</p>
         </div>
         <div class="itemBox" id="itemMasterCurvy" data-annotation="Master">
-          <img class="itemImage" src="../Images/Placeholder.png">
+          <img class="itemImage" src="../Images/Master/Body/Curvy_1.png">
           <p class="itemName">Curvy</p>
           <p class="itemDescription">
           You have a bit more meat on your bones than average, but luckily it's in all the right places.
@@ -1113,7 +1113,7 @@
           <p class="points">+10</p>
         </div>
         <div class="itemBox" id="itemMasterToned" data-annotation="Master">
-          <img class="itemImage" src="../Images/Placeholder.png">
+          <img class="itemImage" src="../Images/Master/Body/Toned_1.png">
           <p class="itemName">Toned</p>
           <p class="itemDescription">
           Fit and toned with visibly defined but not large muscles.
@@ -1125,7 +1125,7 @@
           <p class="points">-10</p>
         </div>
         <div class="itemBox" id="itemMasterMuscular" data-annotation="Master">
-          <img class="itemImage" src="../Images/Placeholder.png">
+          <img class="itemImage" src="../Images/Master/Body/Muscular_1.png">
           <p class="itemName">Muscular</p>
           <p class="itemDescription">
           Bulging with muscles.
