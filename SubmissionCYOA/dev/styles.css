@@ -292,6 +292,11 @@ img
 {
   width: 32.67%;
 }
+  
+.itemBox.halfBox
+{
+  width: 49%;
+}
 
 .itemImage
 {
@@ -370,7 +375,7 @@ hr
 
 @media only screen and (max-width: 600px)
 {
-  .itemBox, .itemBox.smallBox, .itemBox.largebox
+  .itemBox, .itemBox.smallBox, .itemBox.largebox, .itemBox.halfBox
   {
     width: 98%;
   }

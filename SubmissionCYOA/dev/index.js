@@ -257,6 +257,8 @@ function writeConditions(writeArray, startString)
   {
     if (writeArray[i].split('_').length == 3)
       retString += 'at least ' + document.getElementById(writeArray[i]).getElementsByClassName('itemName')[0].innerHTML + ' (' + writeArray[i].split('_')[0].replace('item', '') + ')';
+    else if (document.getElementById(writeArray[i]).hasAttribute('name'))
+      retString += document.getElementById(writeArray[i]).getAttribute('name');
     else
       retString += document.getElementById(writeArray[i]).getElementsByClassName('itemName')[0].innerHTML;
     
